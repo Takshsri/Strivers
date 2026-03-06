@@ -13,7 +13,7 @@ void dnf(vector<int>& a){
         }
         else if(a[mid]==3){
             swap(a[mid],a[high]);
-            high--;
+            high --;
         }
     }
 }

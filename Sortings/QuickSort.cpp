@@ -27,7 +27,6 @@ void Quicksort(vector<int>& a,int l,int r){
         Quicksort(a, p+1, r);
     }
 }
-
 int main(){
     vector<int> a = {23,56,3,1,67,33,12};
 

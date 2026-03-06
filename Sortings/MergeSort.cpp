@@ -39,10 +39,12 @@ void  mergeSort(vector<int>& a,int l,int r){
     merge(a,l,r,mid);
 
 }
+
+
 int main(){
     vector<int> a = {45,2,34,1,67,7,5,4};
     mergeSort(a,0,7);
     for(int i : a){
         cout<<i<<" ";
     }
-}
+} 

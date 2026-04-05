@@ -20,6 +20,21 @@ void moveZeros(vector<int>& a){
         }
     }
 }
+void PracticeMove(vector<int>& a){
+    int i=0,j=0;;
+    int n = a.size();
+    while(i<n){
+        if(a[i]==0){
+            i++;
+    }
+    else{
+        swap(a[i],a[j]);
+        i++;
+        j++;
+    
+    }
+}
+}
 int main(){
     vector<int> a = {0,1,2,0,6};
     moveZeros(a);

@@ -3,20 +3,27 @@
 #include<unordered_map>
 using namespace std;
 int MajorityEle(vector<int>& a){
-    int ans = 0;
-    int freq =0;
-    for(int i=0;i<a.size();i++){
-        if(freq==0){
-            ans = a[i];
+        int ans = 0;
+        int freq = 0;
+        for(int i=0;i<a.size();i++){
+            if(freq ==0){
+                ans = a[i];
+            }
+            else if(ans == a[i]){
+                freq++;
+            }
+            else{
+                freq--;
+            }
         }
-        if(ans == a[i]){
-            freq++;
+        int cnt1 = 0;
+        for(int i=0;i<a.size();i++){
+            if(a[i]==ans){ 
+                cnt1++;
         }
-        else{
-            freq--;
-        }
+
     }
-    return ans;
+    return (cnt1>a.size()/2)? ans : -1;
 }
 //using hash
 int MajorityEleHash(vector<int>& a){
@@ -31,8 +38,11 @@ int MajorityEleHash(vector<int>& a){
         }
     }
     return -1;
-}
-int main(){
-    vector<int> arr = {6,5,5};
-    cout<<"Majority Element :"<<MajorityEleHash(arr);
+} 
+
+
+int main(){ 
+    vector<int> arr = {2,2,1,3,4,2,2 };
+    cout<<"Majority Element :"<<MajorityEle(arr);
+    
 }

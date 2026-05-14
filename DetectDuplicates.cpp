@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<unordered_set>
 using namespace std;
 vector<int> Detect(vector<int>& a,int n){
     int i=0;
@@ -21,11 +22,20 @@ vector<int> Detect(vector<int>& a,int n){
     }
     return res;
 }
-int main(){
-    vector<int> a = {1,3,4,4,5,5};
-    int n = a.size();
-    vector<int> res = Detect(a,n);
-    for(int i : res){
-        cout<<i<<" ";
+//detect duplicates
+bool Duplicates(vector<int>& a){
+    unordered_set<int> st;
+    for(int i : a){
+        if(st.count(i)){
+            return true;
+        }
+        st.insert(i);
     }
+    return false;
+}
+int main(){
+    vector<int> a = {1,3,4,5};
+    int n = a.size();
+    cout<< Duplicates(a);
+    
 }

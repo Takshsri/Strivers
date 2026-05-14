@@ -5,9 +5,9 @@ void CycleSort(vector<int>& a){
     int i=0;
     int n= a.size();
     while(i<n){
-        int currIdx = a[i]-1;
-        if(a[i]!=a[currIdx]){
-            swap(a[i],a[currIdx]);
+        int correctNum = a[i] -1;
+        if(a[i]!=a[correctNum]){
+            swap(a[i],a[correctNum]);
         }
         else{
             i++;

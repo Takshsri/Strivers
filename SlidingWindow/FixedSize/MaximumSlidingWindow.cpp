@@ -12,7 +12,7 @@ vector<int> MaximumSlide(vector<int>& a,int k){
             dq.pop_front();
         }
 
-        while(!dq.empty() && a[dq.back()]<a[i]){
+        while(!dq.empty() && a[dq.back()]<=a[i]){
             dq.pop_back();
         }
         dq.push_back(i);

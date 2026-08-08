@@ -11,7 +11,7 @@ int Target(vector<int>& a,int target){
         while(sum >= target){
             mini = min(mini,i-start+1);
             sum -= a[start++];
-        }
+        }6
     }
     
     return (mini == INT_MAX)? 0: mini;

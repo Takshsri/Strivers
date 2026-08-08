@@ -26,7 +26,7 @@ vector<int> Positives(vector<int>& a,int k){
     return res;
 }
 int main(){
-    vector<int> a = {1,-1,-2,3,45,-3,-6};
+    vector<int> a = {1,2,3,4,5};
     vector<int> res = Positives(a,3);
     for(int i : res){
         cout<<i<<" ";

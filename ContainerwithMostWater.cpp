@@ -18,7 +18,22 @@ int maxWater(vector<int>& ht){
     }
     return maxwater;
 }
+int water(vector<int>& a){
+    int l =0;
+    int r = a.size()-1;
+    int maxWater = 0;
+    while(l<r){
+        int width = r-l;
+        int height = min(a[l],a[r]);
+        int currWater = height * width;
+        maxWater = max(maxWater,currWater);
+        if(a[l]<a[r]) l++;
+        else r--;
+
+    }
+    return maxWater;
+}
 int main(){
     vector<int> ht = {1,2,3};
-    cout<<"Container with Most Water is :"<<maxWater(ht);
+    cout<<"Container with Most Water is :"<<water(ht);
 }

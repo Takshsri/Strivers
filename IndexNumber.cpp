@@ -32,11 +32,11 @@ int IndexBinary(vector<int>& a){
 }
 
 int main(){
-     vector<int> arr = {-6,-4,2,2,5,7};
+     vector<int> arr = {1,1,3};
      if(IndexBinary(arr)!=-1){
         cout<<"Index Number is :"<<IndexBinary(arr)<<endl;
      }
-     else{
+     else{ 
         cout<<"No Index Number Found"<<endl;
      }
      

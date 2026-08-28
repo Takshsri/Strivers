@@ -28,8 +28,18 @@ int BestTime(vector<int>& a){
     }
     return maxProfit;
 }
+int Best(vector<int>& a){
+    int maxPrice =0;
+    int minPrice = INT_MAX;
+    for(int i=0;i<a.size();i++){
+        minPrice = min(minPrice,a[i]);
+        int profit = a[i]-minPrice;
+        maxPrice = max(maxPrice,profit);
+    }
+    return maxPrice;
+}
 int main(){
-    vector<int> a = {12,8,5,3,2};
-    cout<<BestTime(a)<<endl;
+    vector<int> a = {2,5,7,9};
+    cout<<Best(a)<<endl;
     //cout<<SellStock(a);
 }

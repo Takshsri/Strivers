@@ -1,10 +1,12 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include<algorithm>
 using namespace std;
 string Compressor(string str){
     int count = 1;
     string ans= "";
+    sort(str.begin(),str.end());
     for(int i=1;i<=str.size();i++){
         if(i<str.size() && str[i]==str[i-1]){
             count++;
@@ -19,6 +21,6 @@ string Compressor(string str){
     
 }
 int main(){
-    string str = "aaabbcc";
+    string str = "abcabc";
     cout<<Compressor(str);
 }

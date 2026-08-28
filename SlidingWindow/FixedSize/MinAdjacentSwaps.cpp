@@ -24,10 +24,9 @@ int MinSwaps(vector<int>& a){
         if(a[i-count]==1) oneCount--;
         minSwaps = min(minSwaps,count-oneCount);
     }
-    return minSwaps;
+    return minSwaps; 
 }
-
 int main(){
-    vector<int> a = {1,0,1,0,1};
+    vector<int> a = {1,0,1,0,1,0,0,1};
     cout<<MinSwaps(a);
 } 

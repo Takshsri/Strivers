@@ -21,9 +21,10 @@ vector<int> Greater(vector<int>& a){
     }
     return a ;
 }
+
 int main(){
     vector<int> a = {17,18,5,4,6,1};
-    vector<int> res = Greater(a);
+    vector<int> res = Greater(a);   
     for(int i : res){
         cout<<i<<" ";
     }

@@ -11,7 +11,7 @@ int main(){
        currSum = max(a[i],a[i]+currSum);
        maxSum = max(maxSum,currSum); 
         
-    }
+    } 
     cout<<maxSum<<" ";
    
 }
